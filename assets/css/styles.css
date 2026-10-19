@@ -276,6 +276,9 @@ html[lang="ru"] .nav-skills-en {
   max-width: 175px;
   width: 100%;
   height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   padding: 5px;
   border: 1px solid var(--border-color);
@@ -1079,7 +1082,7 @@ html[lang="ru"] .nav-skills-en {
   }
 }
 
-/* ── Education timeline ── */
+/* -- Education timeline -- */
 .page__content .edu-timeline {
   display: flex;
   align-items: stretch;
@@ -1343,7 +1346,7 @@ html[lang="ru"] .nav-skills-en {
   }
 }
 
-/* ── Mobile & tablet (≤924px) ── */
+/* -- Mobile & tablet (<=924px) -- */
 @media (max-width: 924px) {
   html {
     -webkit-text-size-adjust: 100%;
