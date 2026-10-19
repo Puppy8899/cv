@@ -15,7 +15,7 @@
     { re: /^Diplomas and Certificates$/i, id: 'certificates' }
   ];
 
-  var CONTENT_VERSION = '3';
+  var CONTENT_VERSION = '4';
 
   var meta = {
     ru: {
