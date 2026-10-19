@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <title>CV</title>
+  <meta name="description" content="CV">
+  <link rel="stylesheet" href="assets/css/styles.css?v=1">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+  <div class="masthead-wrapper">
+    <header class="masthead">
+      <div class="masthead-inner">
+        <a class="site-title" href="./" id="site-title">CV</a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="section-nav"
+          aria-label="Menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav class="section-nav" id="section-nav" aria-label="Sections">
+          <a href="#" class="section-nav__link" id="nav-link-about">About</a>
+          <a href="#articles" class="section-nav__link" id="nav-link-articles">Articles</a>
+          <a href="#certificates" class="section-nav__link" id="nav-link-certificates">Diplomas and Certificates</a>
+        </nav>
+        <span class="masthead-spacer" aria-hidden="true"></span>
+      </div>
+    </header>
+  </div>
+
+  <div id="main" class="main">
+    <aside class="sidebar">
+      <div class="author__avatar">
+        <img src="assets/img/avatar.svg" alt="" width="175" height="175">
+      </div>
+      <div class="author__content">
+        <h2 class="author__name" id="author-name">Имя Фамилия</h2>
+        <p class="author__bio" id="author-bio">Краткое описание.</p>
+        <div class="author__actions">
+          <button type="button" class="btn btn--lang" id="lang-toggle" aria-label="Switch language">English version 🇬🇧</button>
+        </div>
+      </div>
+    </aside>
+    <main class="page">
+      <div class="page__inner-wrap">
+        <div class="page__content">
+          <div id="markdown-root"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p><span id="year"></span> <span id="footer-name">Имя Фамилия</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js?v=1" defer></script>
+</body>
+
+</html>
