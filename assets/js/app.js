@@ -15,22 +15,22 @@
     { re: /^Diplomas and Certificates$/i, id: 'certificates' }
   ];
 
-  var CONTENT_VERSION = '1';
+  var CONTENT_VERSION = '3';
 
   var meta = {
     ru: {
-      title: 'Имя Фамилия',
-      authorName: 'Имя Фамилия',
-      authorBio: 'Краткое описание.',
-      langToggle: 'English version 🇬🇧',
+      title: 'Ваганова Ольга',
+      authorName: 'Ваганова Ольга',
+      authorBio: 'Студент 4-го курса СПбПУ, ГИ. Зарубежное регионоведение.',
+      langToggle: 'English version',
       sectionNav: { about: 'Обо мне', articles: 'Публикации', certificates: 'Дипломы и Сертификаты' },
       navToggleLabel: 'Меню'
     },
     en: {
-      title: 'Name Surname',
-      authorName: 'Name Surname',
-      authorBio: 'Short description.',
-      langToggle: 'Версия на русском 🇷🇺',
+      title: 'Olga Vaganova',
+      authorName: 'Olga Vaganova',
+      authorBio: '4th-year student, SPbPU, Institute of Humanities. Foreign Regional Studies.',
+      langToggle: 'Версия на русском',
       sectionNav: { about: 'About', articles: 'Articles', certificates: 'Diplomas and Certificates' },
       navToggleLabel: 'Menu'
     }
@@ -183,6 +183,16 @@
       var max = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
     }, { passive: true });
+
+    var followBtn = document.querySelector('.author__urls-btn');
+    var urlsList = document.querySelector('.author__urls');
+    if (followBtn && urlsList) {
+      if (window.matchMedia('(max-width: 924px)').matches) urlsList.setAttribute('hidden', '');
+      followBtn.addEventListener('click', function () {
+        if (urlsList.hasAttribute('hidden')) urlsList.removeAttribute('hidden');
+        else urlsList.setAttribute('hidden', '');
+      });
+    }
 
     var langBtn = document.getElementById('lang-toggle');
     if (langBtn) langBtn.addEventListener('click', toggleLanguage);
